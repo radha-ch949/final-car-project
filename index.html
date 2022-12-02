@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Sales</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-car"></i> Car Sales </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#features">features</a>
+        <a href="#products">vehicles</a>
+        <a href="#categories">categories</a>
+        <a href="#review">review</a>
+        <a href="#blogs">blogs</a>
+	  <a href="contactus.html">Contact Us</a>
+      <a href="../edited car/login-page-in-html-with-css-code/index.html">Admin_Login</a>
+
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn"></div> 
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        <div class="fas fa-user" id="login-btn"></div>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <div class="shopping-cart">
+        
+    </div>
+
+    <form action="order.html" method="get"  class="login-form" required>
+        <h3>login now</h3>
+        <input type="email" placeholder="your email" class="box" required/>
+        <input type="password" placeholder="your password" class="box" required/>
+        <p>forget your password <a href="forget.html">click here</a></p>
+        <p>don't have an account ?
+	<a href="loginpage.html">create now</a></p> 
+	   <input type="submit" value="Login Now">
+    </form>
+  
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>we've got all <span>great</span> models for you</h3>
+        <p>One of the leading online car1 rental management provides EXCLUSIVELY for travel agencies.our aim is to provide you with a fa-star
+            and easy onlne access to the products your clints are asking for whenever that may be.
+        </p>
+        <a href="order.html" class="btn">Book Now </a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- features section starts  -->
+
+<section class="features" id="features">
+
+    <h1 class="heading"> our <span>features</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="image/feature-img-1.png" alt="">
+            <h3>Brand New</h3>
+            <p>On Atos car sale you can find deals on all types of cars, 
+                including small, medium, large. </p>
+            //<a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="image/feature-img-2.png" alt="">
+            <h3>Coupons</h3>
+            <p>Browse Coupon's most popular Car sale deals, 
+                promo codes and discounts at Priceline, Rupees, and more top cars</p>
+            //<a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="image/feature-img-3.png" alt="">
+            <h3>Easy payments</h3>
+            <p>I think all major cars agencies offer this.
+                You can make your reservation without paying but you
+                do need to provide a credit card for the reservation.</p>
+            //<a href="#" class="btn">read more</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- features section ends -->
+
+<!-- products section starts  -->
+
+<section class="products" id="products">
+
+    <h1 class="heading"> Our <span>vehicles</span> </h1>
+
+    <div class="swiper product-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="imagescc/bmw.jpg" alt="">
+                <h4>brand: BMW </h4>
+                <h4>no of seats-4</h4>
+                <h4>fuel type -Diseal</h4>
+                <h4>mileage -22km/Lit</h4>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="book.html" class="btn">Buy Now</a>
+            </div>
+            <div class="swiper-slide box">
+                <img src="imagescc/car_duster.webp" alt="">
+                <h4>brand: DUSTER</h4>
+                <h4>no of seats-5</h4>
+                <h4>fuel type -Diseal</h4>
+                <h4>mileage -25km/Lit</h4>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="book.html" class="btn">Buy Now</a>
+            </div>
+            <div class="swiper-slide box">
+                <img src="imagescc/car_hyundai.webp" alt="">
+                 <h4>brand: HYUNDAI </h4>
+                <h4>no of seats -6</h4>
+                <h4>fuel type -Diseal</h4>
+                <h4>mileage -25km/Lit</h4>
+
+            
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="book.html" class="btn">Buy Now</a>
+            </div>
+            <div class="swiper-slide box">
+                <img src="imagescc/car_i20.jpeg" alt="">
+                <h4>brand: I20</h4>
+                <h4>no of seats-4</h4>
+                <h4>fuel type -Diseal</h4>
+                <h4>mileage -24km/Lit</h4>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="book.html" class="btn">Buy Now</a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- products section ends -->
+
+
+<!--Categories section starts here..-->
+    <section class="categories" id="categories">
+        <h1 class="heading"><span>Categories</span></h1>
+        <div class="box-container">
+
+            <div class="box">
+                <img src="imagescc/car_mg.jpg" alt="">
+                <h3>brand: MG </h3>
+                <h3>no of seats-4</h3>
+                <h3>mileage -24km/Lit</h3>
+                <a href="book.html" class="btn">Buy Now</a>
+            </div>
+            <div class="box">
+                <img src="imagescc/car_verna.webp" alt="">
+                <h3>brand: VERNA </h3>
+                <h3>no of seats-4</h3>
+                 <h3>mileage -22km/Lit</h3>
+                <a href="book.html" class="btn">Buy Now</a>
+            </div>
+            <div class="box">
+                <img src="imagescc/car_volks.jpeg" alt="">
+                <h3>brand: VOLKS WAGEN</h3>
+                <h3>no of seats-5</h3>
+                 <h3>mileage 21km/Lit</h3>
+                <a href="book.html" class="btn"> Buy Now</a>
+            </div>
+
+        </div>
+    </section>
+<!--Categories section ends here..-->
+
+<!--Review section starts here..-->
+
+<section class="review" id="review">
+    <h1 class="heading">
+        Review
+    </h1>
+    <div class="swiper review-slider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="image/pic-1.png" alt="">
+                <p> My family and I have been using Family trip for  Car Rentals services 
+                    for over ten years whenever we travel to Qld. 
+                    We have always found the staff to be friendly, 
+                    courteous and helpful when they have picked us up and dropped us off at the airport.
+                </p>
+                <h3>Ravi Kiran</h3>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image/pic-2.png" alt="">
+                <p> The service is excellent, 
+                    the staff are always very helpful and friendly. 
+                    Their cars are fantastic. 
+                    When family or friends tell me they are travelling to the Gold Coast
+                     I always advise them to hire from GC Family Car Rentals. Thank you."
+                </p>
+                <h3>Haritha</h3>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image/pic-3.png" alt="">
+                <p> 5 Stars
+                    This was our third time renting a car through Car Rentals. 
+                    Always so easy to deal with. Very friendly and helpful staff.
+                     Love that we get picked up and returned to the airport so completely stress free.
+                      Great range of cars to choose from and fabulous prices. We recommend them to
+                       anyone traveling to the Gold Coast. Will use them again and again.
+                </p>
+                <h3>Manoj </h3>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image/pic-4.png" alt="">
+                <p> 5 Stars
+                    Thank you to all the staff, Kay, Darryl and Grant and co!
+                     Your customer service and friendly laid back attitude is much appreciated 
+                     especially when you're heading on holiday. We will come back to you every time.
+                </p>
+                <h3>Sirisha</h3>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--Review section ends here..-->
+
+<!--blogs section starts here..-->
+
+<section class="blogs" id="blogs">
+    <h1 class="heading">Our <span>Blogs</span></h1>
+    <div class="box-container">
+
+        <div class="box">
+            <img src="image/blog-1.jpg" alt="">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i>By user</a>
+                    <a href="#"> <i class="fas fa-calendar"></i>3rd April 2020</a>
+                </div>
+                <h3>Brand New Black Car</h3>
+                <p>Modern new black metallic sedan car in spotlight. 
+                    Generic contemporary desing, brandless. 3D ... Black car vector template for car branding 
+                    and advertising.</p>
+                    <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="image/blog-2.jpg" alt="">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i>By user</a>
+                    <a href="#"> <i class="fas fa-calendar"></i>3rd April 2020</a>
+                </div>
+                <h3>You got to grab this brand new blue car</h3>
+                <p>Everything in life is somewhere else, and you get there in a car. ... 
+                    You never see further than your headlights, but you can make the whole trip that way.</p>
+                    <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="image/blog-3.jpg" alt="">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i>By user</a>
+                    <a href="#"> <i class="fas fa-calendar"></i>3rd April 2020</a>
+                </div>
+                <h3>The coolest car in Town</h3>
+                <p>It's like driving a car at night. You never see further than your headlights,
+                     but you can make the whole trip that way.</p>
+                    <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--Blogs section ends here..-->
+
+
+<!--footer section starts here..-->
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Car Sale <i class="fas fa-car"></i></h3>
+            <p>
+                Many travelers take renting a car for granted especially 
+                during the pandemic when isolation is a priority. Customers prefer convenient
+                 and timely service, but it’s not uncommon for car rentals to lag. 
+                 Roughly speaking, vehicle pick-ups delay every third time. Considering the tight competition 
+                 in this business landscape, car rental services can’t fail to satisfy their customers.
+            </p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Contact info</h3>
+            <a href="#" class="links"> <i class="fas fa-phone">+91 9743510698</i></a>
+            <a href="#" class="links"> <i class="fas fa-envelope">car@gmail.com</i></a>
+            <a href="#" class="links"> <i class="fas fa-map-marker-alt">cars sale</i></a>
+        </div>
+
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="#" class="links"> <i class="fas fa-arrow-right">Home</i></a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right">features</i></a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right">vehicles</i></a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right">categories</i></a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right">review</i></a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right">blogs</i></a>
+        </div>
+
+        
+
+    </div>
+</section>
+<!--footer section ends here..-->
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
+

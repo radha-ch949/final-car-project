@@ -1,0 +1,93 @@
+1.Register table. 
+
+create table Register_Details(CusID int PRIMARY KEY, 
+
+                       Name varchar(32) NOT NULL, 
+
+                       Address varchar(64) NOT NULL, 
+
+                       Age int NOT NULL,
+                       
+                       Dlno varchar(100),
+
+                       Nationality varchar(16) NOT NULL, 
+
+                       Contacts int NOT NULL, 
+          
+                       mailid varchar(100),
+ 
+                       password varchar(20) 
+);
+
+2.Car Details
+
+   create table car_details (
+
+              carno varchar(30) PRIMARY KEY, 
+
+              no_of_seats int,
+ 
+              priceperkm int,
+ 
+              milegeperlitre int,
+   
+              car_type varchar(20),
+
+              car_model varchar(20)
+
+              );
+
+3.Discount Details
+     
+        create table Discount(
+
+              DiID int PRIMARY KEY,
+
+              Amount int,
+
+              Description varchar(250)
+
+             ); 
+
+
+5.Driver details
+
+           Create table Driver_details(
+              
+           Driver_id int PRIMARY KEY,
+  
+           Name varchar(20),
+        
+           DLNO varchar(20),
+
+           Gender varchar(20),
+
+           Email_id varchar(20),
+
+           Mobile int          
+);
+
+6.Booking Details
+
+         create table booking_details1(
+                       Pickup DATETIME,
+                       Dropout DATETIME,
+                       Amount int,
+                       Booking_status varchar(20) NOT NULL,
+                       Drive_option varchar(20),
+                       Book_id int,
+		       carno varchar(30),
+		       DiID int,
+                       Date DATE,
+                       Security_deposit int,
+CONSTRAINT FOREIGN KEY(carno) REFERENCES car_details(carno),
+CONSTRAINT FOREIGN KEY(DiID) REFERENCES Discount(DiID));              
+                 
+
+
+ 
+
+
+
+
+              

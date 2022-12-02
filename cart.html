@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/629044acfa.js" crossorigin="anonymous"></script>
+    <title>Cart</title>
+    <script type="text/javascript" async="" src="https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914"></script>
+    <style>
+
+
+        /* navbar */
+ 
+       
+        #navleft{
+            padding: 8px;
+            color: aliceblue;
+        }
+        #navmiddle{
+            width: 45%;
+            padding-left: 20px;
+            color: aliceblue;
+        }
+        #navright{
+            width: 45%;
+            justify-content: space-between;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: space-around;
+        }
+        p{
+            margin: 0;
+            font-size: 10px;
+        }
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            color: aliceblue;
+            
+        }
+        /* nnavbar */
+        #lrbody{
+            display: flex;
+            
+            width: 100%;
+        }
+        #left{
+            width: 30%;
+            /* border: 1px solid red; */
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            padding: 20px;
+            height: fit-content;
+        }
+        #location, #time{
+            width: 97%;
+            border: 1px solid green;
+            height: 40px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            margin: auto;
+            margin-bottom: 10px;
+            
+        }
+        #carsdetail{
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+            height: 600px;
+            border-radius: 10px;
+            overflow: scroll;
+        }
+        #right{
+            width: 62%;
+            /* border: 1px solid red; */
+            margin-left: 2%;
+            box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        }
+        #seats{
+            display: flex;
+            margin: auto;
+            justify-content: center;
+        }
+        #seats{
+            padding: 10px;
+            border:1px solid rgb(173, 173, 173);
+            display: flex;
+            justify-content: space-around;
+            border-radius: 8px;
+            background-color:rgb(245,245,245) ;
+        }
+        #cartype,#transmission{
+            padding: 10px;
+            border:1px solid rgb(173, 173, 173);
+            display: flex;
+            justify-content: space-around;
+            border-radius: 8px;
+            font-size: 12px;
+            background-color:rgb(245,245,245) ;
+        }
+        
+        #fuelinc{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            border:1px solid rgb(173, 173, 173);
+            background-color:rgb(245,245,245) ;
+            border-radius: 8px;
+            padding: 4px 0;
+        }
+        #fuelinc div{
+            background-color: green;
+            color: white;
+            padding: 4px;
+            text-align: center;
+            width: 90%;
+        
+        }
+        #hatchback{
+            padding: 0 10px;
+        }
+       #location,#time{
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 10px;
+       }
+       img{
+           width: 100%;
+       }
+      
+      #cardetail{
+        width: 100%;
+        height: 90px;
+        margin: 10px 0;
+        border-radius: 8px;
+       
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+      }
+      #imgdiv{
+           width: 20%;
+           overflow: hidden;
+           margin-left: 10px;
+       }
+      #dtldiv{
+          width: 55%;
+          margin-left: 2%;
+          /* border:  1px solid red; */
+        border-radius: 8px;
+      }
+      h6{
+        margin: 0;
+      }
+      .button{
+          background-color: green;
+          height: 40%;
+          border-radius: 8px;
+          border: none;
+          font-size: 10px;
+          color: white;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+          /* margin-top: 15px; */
+          /* margin-left: 50px; */
+      }
+      #btnprice{
+          display: block;
+          padding-top: 20px;
+      }
+        body{
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            font-style: normal;
+            font-size: 14px;
+            -webkit-font-smoothing: antialiased;
+            background-color: rgb(245,245,245);
+        }
+
+    </style>
+   
+</head>
+<body>
+<p style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf7GmGrc5pdWL8LoKFkwb7rpZJ-WybAQqZ5vYBrvF6oxZyks75SGQ_O4ql_41kF2M7ZtY&usqp=CAU');">
+<h1 align="center" style="background-color:green">Book your car</h1>
+
+    <div id="navbar">
+        <div id="navmiddle"><a href="index.html"><p>back</p></a></div>
+    </div>
+    <br><br>
+    <!-- navbar -->
+<div id="lrbody">
+    <div id="left">
+        
+        <h5>Seats</h5>
+        <div id="seats">
+            <label for="seat4"> 4</label>
+           <input type="radio" id="seat4" onclick="myfunction()" name="seat"  value="4">
+           <label for="seat5">5</label>
+           <input type="radio" id="seat5" onchange="myfunction()" name="seat" value="5">
+           <label for="seat6">6</label>
+           <input type="radio" id="seat6" onchange="myfunction()" name="seat" value="6">
+        </div>
+        <h5>Car Types</h5>
+        <div id="cartype">
+            <!-- <div id="I20">I20</div>
+            <div id="BMW">BMW</div>
+<div id="HYUNDAI">HYUNDAI</div>
+<div id="MG">MG</div>
+<div id="VOLKS">VOLKS</div>
+<div id="DUSTER">DUSTER</div>
+<div id="HYUNDAI">HYUNDAI</div> -->
+ 
+           <label for="HYUNDAI">HYUNDAI</label>
+<input type="radio" id="HYUNDAI" onclick="myfunction()" name="type"  value="HYUNDAI">
+            <label for="VOLKS"> VOLKS</label>
+<input type="radio" id="VOLKS" onclick="myfunction()" name="type"  value="VOLKS">
+           <label for="VERNA"> VERNA</label>
+<input type="radio" id="VERNA" onclick="myfunction()" name="type"  value="VERNA">
+           <label for=I20"> I20</label>
+<input type="radio" id="I20" onclick="myfunction()" name="type"  value="I20">
+           <label for="DUSTER">DUSTER</label>
+<input type="radio" id="DUSTER" onclick="myfunction()" name="type" value="DUSTER">
+           <label for="MG">MG</label>
+<input type="radio" id="MG" onclick="myfunction()" name="type" value="MG">
+        </div>
+        <h5>Type</h5>
+        <!-- <div id="transmission">
+            <div id="munal">Munal</div>
+            <div id="Used">Used</div>
+        </div> -->
+           <label for="New"> New</label>
+           <input type="radio" id="New" onclick="myfunction()" name="TrannsMission"  value="New">
+           <label for="Used">Used</label>
+           <input type="radio" id="Used" onclick="myfunction()" name="TrannsMission" value="Used">
+        <br><br>
+           <a href="index.html" style="color:black ;">back</a>
+    </div>
+    
+<!-- right div -->
+
+    <div id="right">
+        
+        <div id="carsdetail"></div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var carsData =  [
+    {
+      image_url: "",
+      name: "HYUNDAI I20",
+      Seat : 4,
+      index:1,
+      carType: "Hatchback",
+      Transmission : "New",
+      price:580,
+    },
+    {
+     image_url: "https://imgd.aeplcdn.com/227x128/n/cw/ec/35465/grand-i10-nios-exterior-right-front-three-quarter-2.jpeg?q=85",
+      name: "Hyundai i20",
+      Seat :4,
+      index:2,
+      carType: "Hatchback",
+      Transmission : "New",
+      price:680,
+    },
+    {
+      image_url: "https://imgd.aeplcdn.com/227x128/n/cw/ec/48543/kwid-exterior-right-front-three-quarter-18.jpeg?isig=0&q=85",
+      name: "Renault Kwid",
+      Seat : 7,
+      index:3,
+      carType: "Hatchback",
+      Transmission : "New",
+      price:870,
+    },
+    {
+     image_url: "https://imgd.aeplcdn.com/227x128/n/cw/ec/54399/exterior-right-front-three-quarter-10.jpeg?q=85",
+      name: "Maruti Suzuki Swift",
+      Seat :5,
+      index:4,
+      carType: "Hatchback",
+      Transmission : "New",
+      price:2580,
+    },
+    {
+      image_url: "https://imgd.aeplcdn.com/227x128/cw/ec/37710/Maruti-Suzuki-Baleno-Right-Front-Three-Quarter-147420.jpg?wm=0&q=85",
+      name: "Maruti Suzuki Baleno",
+      Seat : 4,
+      index:5,
+      carType: "Hatchback",
+      Transmission : "New",
+      price:5810,
+    },
+    {
+      image_url: "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Dzire-2020/7664/1584705998420/front-left-side-47.jpg?tr=w-456",
+      name: "Maruti Dzire",
+      Seat : 7,
+      index:6,
+      carType: "Sedan",
+      Transmission : "Used",
+      price:596,
+    },
+    {
+      image_url: "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Rapid/7920/1608614333184/front-left-side-47.jpg?tr=w-267",
+      name: "Skoda Rapid",
+      Seat : 5,
+      index:7,
+      carType: "Sedan",
+      Transmission : "Used",
+      price:5896,
+    },
+    {
+      image_url: "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Ciaz/7414/1615023791304/front-left-side-47.jpg?tr=w-267",
+      name: "Maruti Ciaz",
+      Seat : 4,
+      index:8,
+      carType: "Sedan",
+      Transmission : "Used",
+      price:5801,
+    },
+    {
+     image_url: "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/City-2017-2020/7259/Honda-City-2017-2020-SV-MT/1637828825177/front-left-side-47.jpg?tr=w-456",
+      name: "Honda City 4th Gen",
+      Seat : 7,
+      index:9,
+      carType: "Sedan",
+      Transmission : "Used",
+      price:5800,
+    },
+    {
+     image_url: "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Verna/7729/1616055133475/front-left-side-47.jpg?imwidth=280&impolicy=resize",
+      name: "Hyundai Verna",
+      Seat :5,
+      index:10,
+      carType: "Sedan",
+      Transmission : "Used",
+      price:589,
+    },
+    {
+     image_url: "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Harrier/7503/1608617769033/front-left-side-47.jpg?tr=w-267",
+      name: "Tata Harrier",
+      Seat :4,
+      index:11,
+      carType: "SUV",
+      Transmission : "Used",
+      price:598,
+    },
+    {
+     image_url: "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Alcazar/8459/1624013603874/front-left-side-47.jpg?imwidth=280&impolicy=resize",
+      name: "Hyundai Alcazar",
+      Seat :7,
+      index:12,
+      carType: "SUV",
+      Transmission : "Used",
+      price:5685,
+    },
+    {
+     image_url: "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Innova-Crysta/8199/1606212255498/front-left-side-47.jpg?imwidth=280&impolicy=resize",
+      name: "Toyota Innova Crysta",
+      Seat : 5,
+      index:13,
+      carType: "SUV",
+      Transmission : "Used",
+      price:5810,
+    },
+    {
+     image_url: "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/City-2017-2020/7259/Honda-City-2017-2020-SV-MT/1637828825177/front-left-side-47.jpg?tr=w-456",
+      name: "Mahindra XUV700",
+      Seat : 5,
+      index:14,
+      carType: "SUV",
+      Transmission : "Used",
+      price:5889,
+    },
+    {
+     image_url: "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Thar/8076/1601635839903/front-left-side-47.jpg?impolicy=resize&imwidth=420",
+      name: "Mahindra Thar",
+      Seat : 4,
+      index:15,
+      carType: "SUV",
+      Transmission : "Used",
+      price:5825,
+    },
+
+
+{
+     image_url: "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Creta/gallery/pc/March/Hyundai_CRETA_SUV_Gallery_PC_1120x600_2.jpg",
+      name: "Hyundai Creta",
+      Seat : 4,
+      index:16,
+      carType: "SUV",
+      Transmission : "Used",
+      price:6200,
+    },
+
+
+
+{
+     image_url: "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/103179/right-front-three-quarter5.jpeg?isig=0&wm=0&q=75",
+      name: "Hyundai i20",
+      Seat : 4,
+      index:17,
+      carType: "SUV",
+      Transmission : "New",
+      price:4500,
+    },
+
+
+{
+     image_url: "https://media.zigcdn.com/media/model/2020/Jan/front-1-4-left-436387776_600x400.jpg",
+      name: "Tata Nexon",
+      Seat : 4,
+      index:18,
+      carType: "SUV",
+      Transmission : "Used",
+      price:5500,
+    },
+
+
+];
+var scdata=JSON.parse(localStorage.getItem("searchUserdata"));
+    console.log(scdata) 
+    scdata.map(function (elem){
+        document.getElementById("location").textContent= `Journey Starts From :-${elem.adress}`;
+        document.getElementById("time").textContent=`Starts time will be :-${elem.time}`;
+    })
+display(carsData);
+
+
+ function display(carsData){
+    document.querySelector("#carsdetail").innerHTML="";
+    carsData.map(function(data){
+    var  div=document.createElement("div");
+    div.setAttribute("id","cardetail");
+    var imgdiv= document.createElement("div");
+    imgdiv.setAttribute("id","imgdiv");
+    
+    var img=document.createElement("img");
+    img.setAttribute("src",data.image_url);
+ 
+    // detail div
+    var dtldiv=document.createElement("div");
+     dtldiv.setAttribute("id","dtldiv");
+
+    var car=document.createElement("h6");
+     car.textContent=data.name;
+
+    var seat=document.createElement("p");
+     seat.innerHTML=`<p>Number of seat - ${data.Seat}</p>`;
+     var type=document.createElement("p");
+     type.textContent=`Cartype:- ${data.carType}`;
+    
+    var transtype=document.createElement("p");
+    transtype.textContent=data.Transmission;
+
+    //button & price div
+    var btnprice=document.createElement("div");
+       btnprice.setAttribute("id","btnprice");
+
+    var price=document.createElement("p");
+       price.textContent=`Price - ₹ ${data.price}`;
+    var btndiv= document.createElement("button");
+       btndiv.innerHTML="BookNow";
+       btndiv.setAttribute("class","button");
+    //    btndiv.setAttribute("onclick","btn()");
+       btndiv.setAttribute("value",data.index);
+
+    // append
+    btnprice.append(btndiv,price)
+    dtldiv.append(car,seat,type,transtype);
+    imgdiv.append(img);
+    div.append(imgdiv,dtldiv,btnprice)
+    document.querySelector("#carsdetail").append(div);
+})
+ }
+
+var seats=0;
+var types="";
+var data=[];
+var transmissions="";
+function myfunction(){
+    var seat=document.getElementsByName("seat");
+    if(seat[0].checked){
+        seats=4;
+    }
+    else if(seat[1].checked){
+        seats=5;
+    }
+    else if(seat[2].checked){
+        seats=7;
+    }
+
+    console.log(seats);
+    var type=document.getElementsByName("type");
+    if(type[0].checked){
+        types="SUV";
+    }
+    else if(type[1].checked){
+        types="Hatchback";
+    }
+    else if(type[2].checked){
+        types="Sedan";
+    }
+
+    console.log(types);
+
+    var transmission=document.getElementsByName("TrannsMission");
+    if(transmission[0].checked){
+        transmissions="New";
+    }
+    else if(transmission[1].checked){
+        transmissions="Used"
+    }
+    console.log(transmissions);
+
+   data = carsData.filter(function (e) {
+            if(seats>0 && types.length==0 && transmissions.length==0){
+                return e.Seat==seats;
+            }
+            else if(seats==0 && types.length>0 && transmissions.length==0){
+                return e.carType==types;
+            }
+            else if(seats==0 && types.length==0 && transmissions.length>0){
+                return e.Transmission==transmissions;
+            }
+            else if(seats>0 && types.length>0 && transmissions.length==0){
+                return  e.Seat==seats&&e.carType==types
+            }
+            else if(seats>0 && types.length==0 && transmissions.length>0){
+                return  e.Seat==seats&&e.Transmission==transmissions;      
+            }
+            else if(seats==0 && types.length>0 && transmissions.length>0){
+                return e.carType==types&&e.Transmission==transmissions;   
+            }
+            else if(seats>0 && types.length>0 && transmissions.length>0){
+                return e.carType==types&&e.Transmission==transmissions&&e.Seat==seats;  
+            }
+    })
+    console.log(data);
+    display(data);
+
+
+    var ind=0;
+    var bookData=[];
+
+    var button = document.querySelectorAll(".button");
+    button.forEach(e => {
+        e.addEventListener("click",function (){
+            console.log(e.value);
+            ind=e.value;
+        carsData.forEach(function (e){
+        if(e.index==ind){
+        
+            bookData.push(e);
+            console.log(bookData)
+        }
+
+    })
+        localStorage.setItem("book",JSON.stringify(bookData));
+        window.location.href="book.html";
+        })
+        
+    });
+    localStorage.setItem("book",bookData);
+
+    console.log(bookData)
+}
+
+</script>

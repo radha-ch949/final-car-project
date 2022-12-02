@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css"> 
+    <title>Booking page</title>
+</head>
+
+<body class="main_bg">
+    <div class="form">
+        
+        <div class="form-text">
+            <h1><span><img src="art-1.png" alt=""></span>Book Now <span><img src="art-1.png" alt=""></span></h1>
+        </div>
+        <div class="main-form">
+            <form action="index.php" method="get">
+
+                <div>
+                    <span>Enter your full name </span>
+                    <input type="text" name="name" id="name" placeholder="Enter your Name" required>
+                </div>
+                <div>
+                    <span>Enter your email</span>
+                    <input type="email" name="name" id="name" placeholder="Enter your email " required> 
+                </div>
+                <div>
+                    <span>Address</span>
+                    <input type="text" name="address" id="address" placeholder=" Enter address" required>
+                </div>
+                <div>
+                    <span>Enter expected delivery date</span>
+                    <input type="date" name="date" id="date" placeholder="date" required>
+                </div>
+                <div>
+                    <span> Enter your phone number </span>
+                    <input type="number" name="number" id="number" placeholder="Enter your number" required>
+                </div>
+                <div id="submit">
+                    <a href="payment.html">
+                    <input type="submit" value="Buy Now" id="Buy">
+                    </a>
+                </div>
+                <div id="back"><a href="index.html">
+                    <input type="button" value="BACK" id="back"></a>
+                </div>
+               
+                   
+                
+                
+
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    function myfunction()
+{
+    alert("success");
+    window.location.href = "payment.html";
+}
+function myfunction1()
+{
+   
+    window.location.href = "index.html";
+}
+</script>
+</html>
